@@ -19,7 +19,7 @@
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
-html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#152036;}
+html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:black;}
 .floatleft {float:left}
 .floatright {float:right}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
@@ -806,7 +806,7 @@ ul.setting-panel-list li{
 }
 .breadcome-list {
     padding:20px;
-	background:#1b2a47;
+	background:#151515;
 	margin:30px 0px;
 }
 .breadcome-heading .form-control, .breadcome-heading .form-control:focus {
@@ -901,7 +901,7 @@ ul.breadcome-menu li a:hover{
 	margin: 5px 0px;
 }
 .breadcomb-report button{
-	background:#152036;
+	background:#2a2a2a;
 }
 .breadcomb-report button:active, .breadcomb-report button:hover, .breadcomb-report button:focus, .breadcomb-report button:visited{
 	outline:none;
@@ -912,19 +912,19 @@ ul.breadcome-menu li a:hover{
 }
 .tooltip-inner{
 	padding:5px 15px;
-	background:#152036;
+	background:#151515;
 }
 .tooltip.right .tooltip-arrow{
-    border-right-color: #152036;
+    border-right-color: #151515;
 }
 .tooltip.bottom .tooltip-arrow{
-	border-bottom-color: #152036;
+	border-bottom-color: #151515;
 }
 .tooltip.top .tooltip-arrow{
-	border-top-color: #152036;
+	border-top-color: #151515;
 }
 .tooltip.left .tooltip-arrow{
-	border-left-color: #152036;
+	border-left-color: #151515;
 }
 .analysis-progrebar-ctn .progress {
     height: 5px;
@@ -949,7 +949,7 @@ ul.breadcome-menu li a:hover{
 }
 .product-sales-chart, .analytics-info-cs, .tranffic-als-inner, .analytics-rounded, .single-new-trend, .personal-info-wrap, .author-widgets-single, .calender-inner, .product-status-wrap, .review-tab-pro-inner, .income-dashone-total, .analytics-nalika-wrap, .analytics-sparkle-line, .analysis-progrebar, .sparkline8-list, .sparkline9-list, .sparkline7-list, .sparkline10-list, .sparkline12-list, .sparkline13-list, .sparkline14-list, .sparkline13-list, .sparkline11-list, .x-editable-list, .code-editor-single, .blog-details-inner, .charts-single-pro, .about-sparkline, .sparkline-list, .button-ad-wrap, .tab-content-details, .sparkline16-list, .sparkline15-list, .tinymce-single{
 	padding:20px;
-	background:#1b2a47;
+	background:#151515;
 }
 .graph-rp{
 	text-align:right;

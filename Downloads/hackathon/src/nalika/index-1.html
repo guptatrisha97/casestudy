@@ -106,14 +106,14 @@
                                     <i class="icon nalika-home"></i>
                                 </div>
                                 <div class="breadcomb-ctn">
-                                    <br><h2> Dashboard </h2>
+                                    <br><h2> PRODICT </h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <div class="breadcomb-report">
-                                <a href='#add link here'><button data-toggle="tooltip" data-placement="left" title="View APM Charts" class="btn"><i class="icon nalika-bar-chart"></i></button></a>
-                                <a href='#add link here'><button data-toggle="tooltip" data-placement="left" title="View Ranking" class="btn"><i class="icon nalika-table"></i></button></a>
+                                <a href='index.html'><button data-toggle="tooltip" data-placement="left" title="View APM Charts" class="btn"><i class="icon nalika-bar-chart"><font face='Arial'> KPI Charts </font></i></button></a>
+                                <a href='index-1.html'><button data-toggle="tooltip" data-placement="left" title="View Ranking" class="btn"><i class="icon nalika-table"><font face='Arial'>  Ranking </font></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -183,6 +183,10 @@
     <script src="js/plugins.js"></script>
     <!-- main JS
         ============================================ -->
+    <div class="product-sales-area mg-tb-30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
     <title>Network</title>
     <script type="text/javascript" src="https://unpkg.com/vis-network@latest/dist/vis-network.min.js"></script>
     <link href="https://unpkg.com/vis-network@latest/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
@@ -193,6 +197,7 @@
       border: 1px solid lightgray;
     }
   </style>
+  </div></div>
 <div class="product-sales-area mg-tb-30">
     <div class="container-fluid">
         <div class="row">
@@ -201,22 +206,23 @@
     <body>
     <div id="mynetwork"></div>
     <script type="text/javascript">
-  // create an array with nodes
+  // create an array with Components
   var nodes = new vis.DataSet([
-    {id: 1, label: 'Node 1'},
-    {id: 2, label: 'Node 2'},
-    {id: 3, label: 'Node 3'},
-    {id: 4, label: 'Node 4'},
-    {id: 5, label: 'Node 5'}
+    {id: 1, label: 'Component 1'},
+    {id: 2, label: 'Component 2'},
+    {id: 3, label: 'Component 3'},
+    {id: 4, label: 'Component 4'},
+    {id: 5, label: 'Component 5'}
   ]);
 
   // create an array with edges
   var edges = new vis.DataSet([
-    {from: 1, to: 3},
     {from: 1, to: 2},
+    {from: 1, to: 4},
     {from: 2, to: 4},
+    {from: 2, to: 3},
+    {from: 3, to: 5},
     {from: 2, to: 5},
-    {from: 3, to: 3}
   ]);
 
   // create a network
@@ -299,11 +305,11 @@ color: white;
 }
 
 /* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4169E1;}
-.bar-4 {width: 30%; height: 18px; background-color: #483D8B;}
-.bar-3 {width: 10%; height: 18px; background-color: #7B68EE;}
-.bar-2 {width: 4%; height: 18px; background-color: #191970;}
-.bar-1 {width: 15%; height: 18px; background-color: #000080;}
+.bar-5 {width: 60%; height: 18px; background-color: #8FBC8F;}
+.bar-4 {width: 30%; height: 18px; background-color: #556B2F;}
+.bar-3 {width: 10%; height: 18px; background-color: yellow;}
+.bar-2 {width: 4%; height: 18px; background-color: #c0c0c0;}
+.bar-1 {width: 15%; height: 18px; background-color: #808080;}
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {
@@ -317,6 +323,7 @@ color: white;
 </style>
                             </head>
                             <body>
+                            
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                             <div class ="boxed" > <span class="heading"> <bold><center>RANKINGS</center></bold> </span></div>

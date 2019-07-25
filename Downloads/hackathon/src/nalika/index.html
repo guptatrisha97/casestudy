@@ -73,17 +73,27 @@
     }
     .line {
         fill: none;
-        stroke: royalblue;
+        stroke: #8FBC8F;
         stroke-width: 2;
-    }
-    .dot {
-        fill: royalblue;
-        stroke: royalblue;
-        stroke-width: 1px;
     }
     .line2 {
         fill: none;
         stroke: yellow;
+        stroke-width: 2;
+    }
+    .line3 {
+        fill: none;
+        stroke: #556B2F;
+        stroke-width: 2;
+    }
+    .line4 {
+        fill: none;
+        stroke: #c0c0c0;
+        stroke-width: 2;
+    }
+    .line5 {
+        fill: none;
+        stroke: #808080;
         stroke-width: 2;
     }
   </style>
@@ -106,14 +116,14 @@
                                                         <i class="icon nalika-home"></i>
                                                     </div>
                                                     <div class="breadcomb-ctn">
-                                                        <br><h2> Dashboard </h2>
+                                                        <br><h2> PRODICT </h2>
                                                     </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                             <div class="breadcomb-report">
-                                                <a href='#add link here'><button data-toggle="tooltip" data-placement="left" title="View APM Charts" class="btn"><i class="icon nalika-bar-chart"></i></button></a>
-                                                <a href='#add link here'><button data-toggle="tooltip" data-placement="left" title="View Ranking" class="btn"><i class="icon nalika-table"></i></button></a>
+                                                <a href='index.html'><button data-toggle="tooltip" data-placement="left" title="View APM Charts" class="btn"><i class="icon nalika-bar-chart"><font face='Helvetica'> KPI Charts </font></i></button></a>
+                                                <a href='index-1.html'><button data-toggle="tooltip" data-placement="left" title="View Ranking" class="btn"><i class="icon nalika-table"><font face='Helvetica'>  Ranking </font></i></button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -339,11 +349,242 @@
     .attr("class", "line") // Assign a class for styling
     .attr("d", line(dataset)); // 11. Calls the line generator
 
-  bar.append("circle") // Uses the enter().append() method
-      .attr("class", "dot") // Assign a class for styling
-      .attr("cx", function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
-      .attr("cy", function(d) { return yScale(d[1]); })
-      .attr("r", 5);
+    //2nd line
+var dataset2 = [
+    ['05 - 01',753, 1900],
+    ['05 - 02',383,1900],
+    ['05 - 03',963,1900],
+    ['05 - 04',1534,1900],
+    ['05 - 05',565,1900],
+    ['05 - 06',500,1900],
+    ['05 - 07',299, 1900],
+    ['05 - 08',434, 1900],
+    ['05 - 09',709, 1900],
+    ['05 - 10',406, 1900],
+    ['05 - 11',399, 1900],
+    ['05 - 12',431, 1900],
+    ['05 - 13',562, 1900],
+    ['05 - 14',229, 1900],
+    ['05 - 15',622, 1900],
+    ['05 - 16',515, 1900],
+    ['05 - 17',728, 1900],
+    ['05 - 18',336, 1900],
+    ['05 - 19',687, 1900],
+    ['05 - 20',719,1900],
+    ['05 - 21',396,1900],
+    ['05 - 22',743,1900],
+  ];
+  var xScale2 = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.1)
+                .domain(dataset2.map(function(d) {
+                  return d[0];
+                }));
+      yScale2 = d3.scaleLinear()
+                .rangeRound([height, 0])
+                .domain([0, d3.max(dataset2, (function (d) {
+                  return d[2];
+                }))]);
+  var g2 = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // axis-x
+  g2.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale2));
+
+  // axis-y
+  g2.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(yScale2));
+
+  var bar2 = g2.selectAll("rect")
+    .data(dataset2)
+    .enter().append("g");
+
+
+  bar.append("path")
+    .attr("class", "line2") // Assign a class for styling
+    .attr("d", line(dataset2)); // 11. Calls the line generator
+
+    //line 3
+var dataset3 = [
+    ['05 - 01',100, 1900],
+    ['05 - 02',723,1900],
+    ['05 - 03',637,1900],
+    ['05 - 04',1234,1900],
+    ['05 - 05',365,1900],
+    ['05 - 06',700,1900],
+    ['05 - 07',499, 1900],
+    ['05 - 08',764, 1900],
+    ['05 - 09',349, 1900],
+    ['05 - 10',1206, 1900],
+    ['05 - 11',346, 1900],
+    ['05 - 12',450, 1900],
+    ['05 - 13',662, 1900],
+    ['05 - 14',429, 1900],
+    ['05 - 15',822, 1900],
+    ['05 - 16',315, 1900],
+    ['05 - 17',828, 1900],
+    ['05 - 18',536, 1900],
+    ['05 - 19',187, 1900],
+    ['05 - 20',919,1900],
+    ['05 - 21',596,1900],
+    ['05 - 22',203,1900],
+  ];
+  var xScale3 = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.1)
+                .domain(dataset3.map(function(d) {
+                  return d[0];
+                }));
+      yScale3 = d3.scaleLinear()
+                .rangeRound([height, 0])
+                .domain([0, d3.max(dataset3, (function (d) {
+                  return d[2];
+                }))]);
+  var g3 = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // axis-x
+  g3.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale3));
+
+  // axis-y
+  g3.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(yScale3));
+
+  var bar3 = g3.selectAll("rect")
+    .data(dataset3)
+    .enter().append("g");
+
+
+  bar.append("path")
+    .attr("class", "line4") // Assign a class for styling
+    .attr("d", line(dataset3)); // 11. Calls the line generator
+
+//line 3
+var dataset4 = [
+    ['05 - 01',400, 1900],
+    ['05 - 02',563,1900],
+    ['05 - 03',237,1900],
+    ['05 - 04',434,1900],
+    ['05 - 05',855,1900],
+    ['05 - 06',1300,1900],
+    ['05 - 07',799, 1900],
+    ['05 - 08',784, 1900],
+    ['05 - 09',549, 1900],
+    ['05 - 10',1406, 1900],
+    ['05 - 11',746, 1900],
+    ['05 - 12',960, 1900],
+    ['05 - 13',522, 1900],
+    ['05 - 14',929, 1900],
+    ['05 - 15',542, 1900],
+    ['05 - 16',785, 1900],
+    ['05 - 17',238, 1900],
+    ['05 - 18',976, 1900],
+    ['05 - 19',117, 1900],
+    ['05 - 20',619,1900],
+    ['05 - 21',436,1900],
+    ['05 - 22',403,1900],
+  ];
+  var xScale4 = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.1)
+                .domain(dataset4.map(function(d) {
+                  return d[0];
+                }));
+      yScale4 = d3.scaleLinear()
+                .rangeRound([height, 0])
+                .domain([0, d3.max(dataset4, (function (d) {
+                  return d[2];
+                }))]);
+  var g4 = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // axis-x
+  g4.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale4));
+
+  // axis-y
+  g4.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(yScale4));
+
+  var bar4 = g4.selectAll("rect")
+    .data(dataset4)
+    .enter().append("g");
+
+
+  bar.append("path")
+    .attr("class", "line3") // Assign a class for styling
+    .attr("d", line(dataset4)); // 11. Calls the line generator
+
+ //5th line
+ var dataset5 = [
+    ['05 - 01',343, 1900],
+    ['05 - 02',453,1900],
+    ['05 - 03',733,1900],
+    ['05 - 04',134,1900],
+    ['05 - 05',395,1900],
+    ['05 - 06',270,1900],
+    ['05 - 07',489, 1900],
+    ['05 - 08',104, 1900],
+    ['05 - 09',369, 1900],
+    ['05 - 10',496, 1900],
+    ['05 - 11',389, 1900],
+    ['05 - 12',191, 1900],
+    ['05 - 13',1022, 1900],
+    ['05 - 14',239, 1900],
+    ['05 - 15',192, 1900],
+    ['05 - 16',265, 1900],
+    ['05 - 17',488, 1900],
+    ['05 - 18',196, 1900],
+    ['05 - 19',617, 1900],
+    ['05 - 20',299,1900],
+    ['05 - 21',916,1900],
+    ['05 - 22',243,1900],
+  ];
+  var xScale5 = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.1)
+                .domain(dataset5.map(function(d) {
+                  return d[0];
+                }));
+      yScale5 = d3.scaleLinear()
+                .rangeRound([height, 0])
+                .domain([0, d3.max(dataset5, (function (d) {
+                  return d[2];
+                }))]);
+  var g5 = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // axis-x
+  g5.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale5));
+
+  // axis-y
+  g5.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(yScale5));
+
+  var bar5 = g5.selectAll("rect")
+    .data(dataset5)
+    .enter().append("g");
+
+
+  bar.append("path")
+    .attr("class", "line5") // Assign a class for styling
+    .attr("d", line(dataset5)); // 11. Calls the line generator
+
 
   </script>
 
@@ -436,13 +677,9 @@
     .attr("class", "line") // Assign a class for styling
     .attr("d", line(dataset)); // 11. Calls the line generator
 
-  bar.append("circle") // Uses the enter().append() method
-      .attr("class", "dot") // Assign a class for styling
-      .attr("cx", function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
-      .attr("cy", function(d) { return yScale(d[1]); })
-      .attr("r", 5);
-
   </script>
+
+
 <script src="js/main.js"></script>
 <script>
   var dataset = [
@@ -528,16 +765,13 @@
       .curve(d3.curveMonotoneX);
 
   bar.append("path")
-    .attr("class", "line") // Assign a class for styling
+    .attr("class", "line5") // Assign a class for styling
     .attr("d", line(dataset)); // 11. Calls the line generator
 
-  bar.append("circle") // Uses the enter().append() method
-      .attr("class", "dot") // Assign a class for styling
-      .attr("cx", function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
-      .attr("cy", function(d) { return yScale(d[1]); })
-      .attr("r", 5);
 
   </script>
+
+
 <script src="js/main.js"></script>
 <script>
   var dataset = [
@@ -623,14 +857,8 @@
       .curve(d3.curveMonotoneX);
 
   bar.append("path")
-    .attr("class", "line") // Assign a class for styling
+    .attr("class", "line3") // Assign a class for styling
     .attr("d", line(dataset)); // 11. Calls the line generator
-
-  bar.append("circle") // Uses the enter().append() method
-      .attr("class", "dot") // Assign a class for styling
-      .attr("cx", function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
-      .attr("cy", function(d) { return yScale(d[1]); })
-      .attr("r", 5);
 
   </script>
 
