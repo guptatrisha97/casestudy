@@ -103,7 +103,7 @@
 
 <body>
     <div class="header-advance-area"><div class="header-top-area"></div></div>
-
+            <div>
                 <div class="breadcome-area">
                     <div class="container-fluid">
                         <div class="row">
@@ -590,7 +590,7 @@ var dataset4 = [
 
 <script src="js/main.js"></script>
 <script>
-  var dataset = [
+  var dataset = [[
     ['05 - 01',703, 1900],
     ['05 - 02',1473,1900],
     ['05 - 03',863,1900],
@@ -613,7 +613,7 @@ var dataset4 = [
     ['05 - 20',419,1900],
     ['05 - 21',296,1900],
     ['05 - 22',343,1900],
-  ];
+  ]];
 
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 500,
@@ -774,8 +774,8 @@ var dataset4 = [
 
 <script src="js/main.js"></script>
 <script>
-  var dataset = [
-    ['05 - 01',703, 1900],
+  var datasets = [
+    [['05 - 01',703, 1900],
     ['05 - 02',1473,1900],
     ['05 - 03',863,1900],
     ['05 - 04',1494,1900],
@@ -783,35 +783,53 @@ var dataset4 = [
     ['05 - 06',568,1900],
     ['05 - 07',189, 1900],
     ['05 - 08',464, 1900],
-    ['05 - 09',731, 1900],
+    ['05 - 17',228, 1900],
+    ['05 - 18',436, 1900],
+    ['05 - 19',287, 1900],
+    ['05 - 20',419,1900],
+    ['05 - 21',296,1900],
+    ['05 - 22',343,1900],], 
+    [['05 - 09',731, 1900],
     ['05 - 10',306, 1900],
     ['05 - 11',899, 1900],
     ['05 - 12',231, 1900],
     ['05 - 13',262, 1900],
     ['05 - 14',429, 1900],
     ['05 - 15',322, 1900],
-    ['05 - 16',315, 1900],
-    ['05 - 17',228, 1900],
-    ['05 - 18',436, 1900],
-    ['05 - 19',287, 1900],
-    ['05 - 20',419,1900],
-    ['05 - 21',296,1900],
-    ['05 - 22',343,1900],
+    ['05 - 16',315, 1900],]
   ];
+  let repeat_idx = 0
+  var datasets=["dataset3.csv","data.csv","dataset1.csv"];
+    
+    setInterval(function(){
+        dataset = datasets[repeat_idx%3];
+        d3.csv(dataset, function(loadeddata) {
+            temp_dataset = loadeddata;
+                    repeat_idx += 1;
+            new_arr = [];
+            console.log(temp_dataset);
+            temp_dataset.forEach(function (data){
+                console.log(data)
+                arr_obj = [data['date'], data['close'], data['const']];
+                new_arr.push(arr_obj);
+            }     
+            )
+    loadeddata = new_arr;
+                console.log(loadeddata);
 
-  var margin = {top: 20, right: 20, bottom: 30, left: 40},
+           var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 500,
       height = 300;
-
+      
   var xScale = d3.scaleBand()
                 .rangeRound([0, width])
                 .padding(0.1)
-                .domain(dataset.map(function(d) {
+                .domain(loadeddata.map(function(d) {
                   return d[0];
                 }));
-      yScale = d3.scaleLinear()
+  var yScale = d3.scaleLinear()
                 .rangeRound([height, 0])
-                .domain([0, d3.max(dataset, (function (d) {
+                .domain([0, d3.max(loadeddata, (function (d) {
                   return d[2];
                 }))]);
 
@@ -831,11 +849,10 @@ var dataset4 = [
   g.append("g")
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(yScale));
-
+      
   var bar = g.selectAll("rect")
-    .data(dataset)
+    .data(loadeddata)
     .enter().append("g");
-
 
   // labels on the bar chart
   bar.append("text")
@@ -858,9 +875,33 @@ var dataset4 = [
 
   bar.append("path")
     .attr("class", "line3") // Assign a class for styling
-    .attr("d", line(dataset)); // 11. Calls the line generator
+    .attr("d", line(loadeddata)); // 11. Calls the line generator
+    
+    setTimeout(function() {
+        d3.select("#linebarchart4").select("svg").remove();
+    }, 500); 
+        });    
 
-  </script>
+  }, 1000);
+  
+  // Get the data
+//  var datasets=["dataset3.csv","data-alt.csv","data.csv"];
+    
+//  var intervalId = setInterval(function() {
+//      print('updating graph...');
+//      var svg = d3.select("body").transition();
+//      svg.select(".line")
+//              .duration(750)
+//              .attr("d", valueline(data));
+//      svg.select(".axis.axis--x")
+//              .duration(750)
+//              .call(xScale);
+//      svg.select(".axis.axis--y")
+//              .duration(750)
+//              .call(yScale);
+//  }, 1000);
+
+ </script>
 
 </body>
 
