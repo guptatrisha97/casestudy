@@ -67,13 +67,6 @@
         display: none;
         fill: white;
     }
-    .axisWhite text{
-        fill:white;
-    }
-    .axisRed line{
-        stroke:red;
-        
-    }
     .line {
         fill: none;
         stroke: #8FBC8F;
@@ -101,77 +94,80 @@
     }
   </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-
+    
 </head>
 
 <body>
-<div class="header-advance-area"><div class="header-top-area"></div></div>
-<div>
-    <div class="breadcome-area">
+    <div class="header-advance-area"><div class="header-top-area"></div></div>
+            <div>
+                <div class="breadcome-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="breadcome-list">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="breadcomb-wp">
+                                                    <div class="breadcomb-icon">
+                                                        <i class="icon nalika-home"></i>
+                                                    </div>
+                                                    <div class="breadcomb-ctn">
+                                                        <br><h2> PRODICT </h2>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="breadcomb-report">
+                                                <a href='index.html'><button data-toggle="tooltip" data-placement="left" title="View APM Charts" class="btn"><i class="icon nalika-bar-chart"><font face='Helvetica'> KPI Charts </font></i></button></a>
+                                                <a href='index-1.html'><button data-toggle="tooltip" data-placement="left" title="View Ranking" class="btn"><i class="icon nalika-table"><font face='Helvetica'>  Ranking </font></i></button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+    <div class="product-sales-area mg-tb-30">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="breadcome-list">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="breadcomb-wp">
-                                    <div class="breadcomb-icon">
-                                        <i class="icon nalika-home"></i>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="product-sales-chart">
+                        <div class="portlet-title">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="caption pro-sl-hd">
+                                        <span class="caption-subject text-uppercase"><b>System Metrics</b></span>
                                     </div>
-                                    <div class="breadcomb-ctn">
-                                        <br><h2> PRODICT </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="breadcomb-report">
-                                    <a href='index.html'><button data-toggle="tooltip" data-placement="left" title="View APM Charts" class="btn"><i class="icon nalika-bar-chart"><font face='Helvetica'> KPI Charts </font></i></button></a>
-                                    <a href='index-1.html'><button data-toggle="tooltip" data-placement="left" title="View Ranking" class="btn"><i class="icon nalika-table"><font face='Helvetica'>  Ranking </font></i></button></a>
                                 </div>
                             </div>
                         </div>
+                        <div id="linebarchart" class="flot-chart-sts flot-chart curved-chart-statistic"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="product-sales-chart">
+                        <div class="portlet-title">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="caption pro-sl-hd">
+                                        <span class="caption-subject text-uppercase"><b>Symphony Chatrooms</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="linebarchart2" class="flot-chart-sts flot-chart curved-chart-statistic"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="product-sales-area mg-tb-30">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <div class="product-sales-chart">
-                    <div class="portlet-title">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="caption pro-sl-hd">
-                                    <span class="caption-subject text-uppercase"><b>System Metrics</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="linebarchart" class="flot-chart-sts flot-chart curved-chart-statistic"></div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <div class="product-sales-chart">
-                    <div class="portlet-title">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="caption pro-sl-hd">
-                                    <span class="caption-subject text-uppercase"><b>Symphony Chatrooms</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="linebarchart2" class="flot-chart-sts flot-chart curved-chart-statistic"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+    
+ 
 
 
     <div class="product-sales-area mg-tb-30">
@@ -200,7 +196,7 @@
                                         <span class="caption-subject text-uppercase"><b>Data Loss</b></span>
                                     </div>
                                 </div>
-
+                                
                             </div>
                         </div>
                         <div id="linebarchart4" class="flot-chart-sts flot-chart curved-chart-statistic"></div>
@@ -208,83 +204,86 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
+    
 
-
-    <!-- jquery
-        ============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-        ============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-        ============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-        ============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-        ============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-        ============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-        ============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-        ============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-        ============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-        ============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- sparkline JS
-        ============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
-    <!-- calendar JS
-        ============================================ -->
-    <script src="js/calendar/moment.min.js"></script>
-    <script src="js/calendar/fullcalendar.min.js"></script>
-    <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- float JS
-        ============================================ -->
-    <script src="js/flot/jquery.flot.js"></script>
-    <script src="js/flot/jquery.flot.resize.js"></script>
-    <script src="js/flot/curvedLines.js"></script>
-    <script src="js/flot/flot-active.js"></script>
-    <!-- plugins JS
-        ============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-        ============================================ -->
-    <script src="js/main.js"></script>
-    <script>
-  let repeat_idx = 0
+<!-- jquery
+    ============================================ -->
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="js/jquery-price-slider.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="js/jquery.meanmenu.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- sticky JS
+    ============================================ -->
+<script src="js/jquery.sticky.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="js/jquery.scrollUp.min.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+<!-- metisMenu JS
+    ============================================ -->
+<script src="js/metisMenu/metisMenu.min.js"></script>
+<script src="js/metisMenu/metisMenu-active.js"></script>
+<!-- sparkline JS
+    ============================================ -->
+<script src="js/sparkline/jquery.sparkline.min.js"></script>
+<script src="js/sparkline/jquery.charts-sparkline.js"></script>
+<!-- calendar JS
+    ============================================ -->
+<script src="js/calendar/moment.min.js"></script>
+<script src="js/calendar/fullcalendar.min.js"></script>
+<script src="js/calendar/fullcalendar-active.js"></script>
+<!-- float JS
+    ============================================ -->
+<script src="js/flot/jquery.flot.js"></script>
+<script src="js/flot/jquery.flot.resize.js"></script>
+<script src="js/flot/curvedLines.js"></script>
+<script src="js/flot/flot-active.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="js/plugins.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="js/main.js"></script>
+<script>
+   repeat_idx = 0
   var datasets=["dataset3.csv","data.csv","dataset1.csv"];
+    
     setInterval(function(){
         dataset = datasets[repeat_idx%3];
         d3.csv(dataset, function(loadeddata) {
             temp_dataset = loadeddata;
                     repeat_idx += 1;
             new_arr = [];
-            //console.log(temp_dataset);
+            console.log(temp_dataset);
             temp_dataset.forEach(function (data){
-              //  console.log(data)
+                console.log(data)
                 arr_obj = [data['date'], data['close'], data['const']];
                 new_arr.push(arr_obj);
-            }
+            }     
             )
     loadeddata = new_arr;
-                //console.log(loadeddata);
+                console.log(loadeddata);
+
            var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 500,
       height = 300;
+      
   var xScale = d3.scaleBand()
                 .rangeRound([0, width])
                 .padding(0.1)
@@ -296,73 +295,186 @@
                 .domain([0, d3.max(loadeddata, (function (d) {
                   return d[2];
                 }))]);
+
   var svg = d3.select("#linebarchart").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom);
   var g = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-      
+
   // axis-x
   g.append("g")
-      .attr("class", "axisRed")
+      .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
-      .attr("class", "axisWhite")
       .call(d3.axisBottom(xScale));
+
   // axis-y
   g.append("g")
-      .attr("class", "axisRed")
-            .attr("class", "axisWhite")
-
+      .attr("class", "axis axis--y")
       .call(d3.axisLeft(yScale));
+      
   var bar = g.selectAll("rect")
     .data(loadeddata)
     .enter().append("g");
+
   // labels on the bar chart
   bar.append("text")
     .attr("dy", "1.3em")
     .attr("x", function(d) { return xScale(d[0]) + xScale.bandwidth() / 2; })
     .attr("y", function(d) { return yScale(d[2]); })
     .attr("text-anchor", "middle")
-    .attr("class", "axisWhite")
     .attr("font-family", "sans-serif")
-    .attr("font-size", "21px")
-    .attr("fill", "white")
+    .attr("font-size", "11px")
+    .attr("fill", "black")
     .text(function(d) {
       return ""; // d[2]
     });
+
   // line chart
   var line = d3.line()
       .x(function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
       .y(function(d) { return yScale(d[1]); })
       .curve(d3.curveMonotoneX);
+
   bar.append("path")
     .attr("class", "line") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+    
+
   bar.append("path")
     .attr("class", "line2") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+
   //line 3
+
+
   bar.append("path")
     .attr("class", "line3") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+
+
+
 //line 4
+
+
   bar.append("path")
     .attr("class", "line4") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+
  //line 5
+
+
   bar.append("path")
     .attr("class", "line5") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+
+
     setTimeout(function() {
         d3.select("#linebarchart").select("svg").remove();
-    }, 500);
-        });
+    }, 500); 
+        });    
+
   }, 1000);
+  
+
   </script>
-    <script src="js/main.js"></script>
-    <script>
-//graph 2
+
+<script src="js/main.js"></script>
+<script>
+    //graph2
+   repeat_idx = 0
   var datasets=["dataset3.csv","data.csv","dataset1.csv"];
+    
+    setInterval(function(){
+        dataset = datasets[repeat_idx%3];
+        d3.csv(dataset, function(loadeddata) {
+            temp_dataset = loadeddata;
+                    repeat_idx += 1;
+            new_arr = [];
+            console.log(temp_dataset);
+            temp_dataset.forEach(function (data){
+                console.log(data)
+                arr_obj = [data['date'], data['close'], data['const']];
+                new_arr.push(arr_obj);
+            }     
+            )
+    loadeddata = new_arr;
+                console.log(loadeddata);
+
+           var margin = {top: 20, right: 20, bottom: 30, left: 40},
+      width = 500,
+      height = 300;
+      
+  var xScale = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.1)
+                .domain(loadeddata.map(function(d) {
+                  return d[0];
+                }));
+  var yScale = d3.scaleLinear()
+                .rangeRound([height, 0])
+                .domain([0, d3.max(loadeddata, (function (d) {
+                  return d[2];
+                }))]);
+
+  var svg2 = d3.select("#linebarchart2").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+  var g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // axis-x
+  g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale));
+
+  // axis-y
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(yScale));
+      
+  var bar = g.selectAll("rect")
+    .data(loadeddata)
+    .enter().append("g");
+
+  // labels on the bar chart
+  bar.append("text")
+    .attr("dy", "1.3em")
+    .attr("x", function(d) { return xScale(d[0]) + xScale.bandwidth() / 2; })
+    .attr("y", function(d) { return yScale(d[2]); })
+    .attr("text-anchor", "middle")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "11px")
+    .attr("fill", "black")
+    .text(function(d) {
+      return ""; // d[2]
+    });
+
+  // line chart
+  var line = d3.line()
+      .x(function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
+      .y(function(d) { return yScale(d[1]); })
+      .curve(d3.curveMonotoneX);
+
+  bar.append("path")
+    .attr("class", "line4") // Assign a class for styling
+    .attr("d", line(loadeddata)); // 11. Calls the line generator
+    
+    setTimeout(function() {
+        d3.select("#linebarchart2").select("svg2").remove();
+    }, 500); 
+        });    
+
+  }, 1000);
+  
+
+  </script>
+
+
+<script src="js/main.js"></script>
+<script>
+//graph 3
   setInterval(function(){
         dataset = datasets[repeat_idx%3];
         d3.csv(dataset, function(loadeddata) {
@@ -371,18 +483,18 @@
             new_arr = [];
             console.log(temp_dataset);
             temp_dataset.forEach(function (data){
-                console.log("Hello")
                 console.log(data)
                 arr_obj = [data['date'], data['close'], data['const']];
                 new_arr.push(arr_obj);
-            }
+            }     
             )
     loadeddata = new_arr;
                 console.log(loadeddata);
-                console.log("Hi")
+
            var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 500,
       height = 300;
+      
   var xScale = d3.scaleBand()
                 .rangeRound([0, width])
                 .padding(0.1)
@@ -394,109 +506,28 @@
                 .domain([0, d3.max(loadeddata, (function (d) {
                   return d[2];
                 }))]);
-  var svg = d3.select("#linebarchart2").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom);
-  var g = svg.append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-  // axis-x
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-            .attr("class", "axisWhite")
 
-      .call(d3.axisBottom(xScale));
-  // axis-y
-  g.append("g")
-      .attr("class", "axis axis--y")
-           .attr("class", "axisWhite")
-
-                .call(d3.axisLeft(yScale));
-  var bar = g.selectAll("rect")
-    .data(loadeddata)
-    .enter().append("g");
-  // labels on the bar chart
-  bar.append("text")
-    .attr("dy", "1.3em")
-    .attr("x", function(d) { return xScale(d[0]) + xScale.bandwidth() / 2; })
-    .attr("y", function(d) { return yScale(d[2]); })
-    .attr("text-anchor", "middle")
-    .attr("font-family", "sans-serif")
-    .attr("font-size", "11px")
-    .attr("fill", "black")
-    .text(function(d) {
-      return ""; // d[2]
-    });
-  // line chart
-  var line = d3.line()
-      .x(function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
-      .y(function(d) { return yScale(d[1]); })
-      .curve(d3.curveMonotoneX);
-  bar.append("path")
-    .attr("class", "line3") // Assign a class for styling
-    .attr("d", line(loadeddata)); // 11. Calls the line generator
-    setTimeout(function() {
-        d3.select("#linebarchart2").select("svg").remove();
-    }, 500);
-        });
-  }, 1000);
-  </script>
-
-    <script src="js/main.js"></script>
-    <script>
-//graph 3
-  var datasets=["dataset3.csv","data.csv","dataset1.csv"];
-  setInterval(function(){
-        dataset = datasets[repeat_idx%3];
-        d3.csv(dataset, function(loadeddata) {
-            temp_dataset = loadeddata;
-                    repeat_idx += 1;
-            new_arr = [];
-            //console.log(temp_dataset);
-            temp_dataset.forEach(function (data){
-                console.log(data)
-                arr_obj = [data['date'], data['close'], data['const']];
-                new_arr.push(arr_obj);
-            }
-            )
-    loadeddata = new_arr;
-              //  console.log(loadeddata);
-           var margin = {top: 20, right: 20, bottom: 30, left: 40},
-      width = 500,
-      height = 300;
-  var xScale = d3.scaleBand()
-                .rangeRound([0, width])
-                .padding(0.1)
-                .domain(loadeddata.map(function(d) {
-                  return d[0];
-                }));
-  var yScale = d3.scaleLinear()
-                .rangeRound([height, 0])
-                .domain([0, d3.max(loadeddata, (function (d) {
-                  return d[2];
-                }))]);
   var svg = d3.select("#linebarchart3").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom);
   var g = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
   // axis-x
   g.append("g")
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
-            .attr("class", "axisWhite")
+      .call(d3.axisBottom(xScale));
 
-                .call(d3.axisBottom(xScale));
   // axis-y
   g.append("g")
       .attr("class", "axis axis--y")
-            .attr("class", "axisWhite")
-            .attr("stroke","white")
-
-                .call(d3.axisLeft(yScale));
+      .call(d3.axisLeft(yScale));
+      
   var bar = g.selectAll("rect")
     .data(loadeddata)
     .enter().append("g");
+
   // labels on the bar chart
   bar.append("text")
     .attr("dy", "1.3em")
@@ -509,44 +540,52 @@
     .text(function(d) {
       return ""; // d[2]
     });
+
   // line chart
   var line = d3.line()
       .x(function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
       .y(function(d) { return yScale(d[1]); })
       .curve(d3.curveMonotoneX);
+
   bar.append("path")
     .attr("class", "line3") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+    
     setTimeout(function() {
         d3.select("#linebarchart3").select("svg").remove();
-    }, 500);
-        });
+    }, 500); 
+        });    
+
   }, 1000);
   </script>
 
 
-    <script src="js/main.js"></script>
-    <script>
+<script src="js/main.js"></script>
+<script>
     //graph4
+   repeat_idx = 0
   var datasets=["dataset3.csv","data.csv","dataset1.csv"];
+    
     setInterval(function(){
         dataset = datasets[repeat_idx%3];
         d3.csv(dataset, function(loadeddata) {
             temp_dataset = loadeddata;
                     repeat_idx += 1;
             new_arr = [];
-            //console.log(temp_dataset);
+            console.log(temp_dataset);
             temp_dataset.forEach(function (data){
                 console.log(data)
                 arr_obj = [data['date'], data['close'], data['const']];
                 new_arr.push(arr_obj);
-            }
+            }     
             )
     loadeddata = new_arr;
-              //  console.log(loadeddata);
+                console.log(loadeddata);
+
            var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 500,
       height = 300;
+      
   var xScale = d3.scaleBand()
                 .rangeRound([0, width])
                 .padding(0.1)
@@ -558,27 +597,28 @@
                 .domain([0, d3.max(loadeddata, (function (d) {
                   return d[2];
                 }))]);
+
   var svg = d3.select("#linebarchart4").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom);
   var g = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
   // axis-x
   g.append("g")
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
-            .attr("class", "axisWhite")
+      .call(d3.axisBottom(xScale));
 
-                .call(d3.axisBottom(xScale));
   // axis-y
   g.append("g")
       .attr("class", "axis axis--y")
-            .attr("class", "axisWhite")
-
-                .call(d3.axisLeft(yScale));
+      .call(d3.axisLeft(yScale));
+      
   var bar = g.selectAll("rect")
     .data(loadeddata)
     .enter().append("g");
+
   // labels on the bar chart
   bar.append("text")
     .attr("dy", "1.3em")
@@ -591,19 +631,26 @@
     .text(function(d) {
       return ""; // d[2]
     });
+
   // line chart
   var line = d3.line()
       .x(function(d, i) { return xScale(d[0]) + xScale.bandwidth() / 2; })
       .y(function(d) { return yScale(d[1]); })
       .curve(d3.curveMonotoneX);
+
   bar.append("path")
     .attr("class", "line4") // Assign a class for styling
     .attr("d", line(loadeddata)); // 11. Calls the line generator
+    
     setTimeout(function() {
         d3.select("#linebarchart4").select("svg").remove();
-    }, 800);
-        });
+    }, 500); 
+        });    
+
   }, 1000);
+  
+
+
  </script>
 
 </body>
