@@ -210,15 +210,15 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
     </head>
     <body>
-    <div id="mynetwork"><img src="graph.jpg" alt="Italian Trulli"> </div> <!--  <div id="mynetwork"></div>
+    <div id="mynetwork"><img src="graph.png" alt="Italian Trulli"> </div> <!--  <div id="mynetwork"></div>
     <script type="text/javascript">
   // create an array with Components
   var nodes = new vis.DataSet([
-    {id: 1, label: 'Component 1'},
-    {id: 2, label: 'Component 2'},
-    {id: 3, label: 'Component 3'},
-    {id: 4, label: 'Component 4'},
-    {id: 5, label: 'Component 5'}
+    {id: 1, label: 'Pre-filter'},
+    {id: 2, label: 'Price Services'},
+    {id: 3, label: 'Controls'},
+    {id: 4, label: 'Pre-filter|Price Services'},
+    {id: 5, label: 'Price Services|Controls'}
   ]);
 
   // create an array with edges
@@ -1230,85 +1230,82 @@ color: white;
 							<div id= 'parent_dashboard'>
 							<div id= 'ranking_dashboard'>
 
-                            <div class="row">
-                                <div class="side">
-                                    <div>Component 1</div>
-                                </div>
-                                <div id='component1-parent'>
-									<div class="middle">
-										<div class="bar-container">
-											<div id='component1-css' class="bar-1"></div>
-										</div>
-									</div>
-									<div id='component1'>
-										<div class="side right">
-											<div>15</div>
-										</div>
-									</div>
-								</div>
-                                <div class="side">
-                                    <div>Component 2</div>
-                                </div>
-                                <div id='component2-parent'>
-									<div class="middle">
-										<div class="bar-container">
-											<div id='component2-css' class="bar-2"></div>
-										</div>
-									</div>
-									<div id='component2'>
-										<div class="side right">
-											<div>15</div>
-										</div>
-									</div>
-								</div>
-                                <div class="side">
-                                    <div>Component 3</div>
-                                </div>
-								<div id='component3-parent'>
-									<div class="middle">
-										<div class="bar-container">
-											<div id='component3-css' class="bar-3"></div>
-										</div>
-									</div>
-									<div id='component3'>
-										<div class="side right">
-											<div>15</div>
-										</div>
-									</div>
-								</div>
-                                <div class="side">
-                                    <div>Component 4</div>
-                                </div>
-                                <div id='component4-parent'>
-									<div class="middle">
-										<div class="bar-container">
-											<div id='component4-css' class="bar-4"></div>
-										</div>
-									</div>
-									<div id='component4'>
-										<div class="side right">
-											<div>15</div>
-										</div>
-									</div>
-								</div>
-                                <div class="side">
-                                    <div>Component 5</div>
-                                </div>
-                                <div id='component5-parent'>
-									<div class="middle">
-										<div class="bar-container">
-											<div id='component5-css' class="bar-5"></div>
-										</div>
-									</div>
-									<div id='component5'>
-										<div class="side right">
-											<div>15</div>
-										</div>
-									</div>
-								</div>
-                            </div>
-							</div>
-							</div>
+                                <div class="row">
+                                    <div class="side">
+                                        <div>Pre-filter</div>
+                                    </div>
+                                    <div id='component1-parent'>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div id='component1-css' class="bar-1"></div>
+                                            </div>
+                                        </div>
+                                        <div id='component1'>
+                                            <div class="side right">
+                                                <div>15</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <div>Price Services</div>
+                                    </div>
+                                    <div id='component2-parent'>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div id='component2-css' class="bar-2"></div>
+                                            </div>
+                                        </div>
+                                        <div id='component2'>
+                                            <div class="side right">
+                                                <div>15</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <div>Controls</div>
+                                    </div>
+                                    <div id='component3-parent'>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div id='component3-css' class="bar-3"></div>
+                                            </div>
+                                        </div>
+                                        <div id='component3'>
+                                            <div class="side right">
+                                                <div>15</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <div>Pre-filter | PS</div>
+                                    </div>
+                                    <div id='component4-parent'>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div id='component4-css' class="bar-4"></div>
+                                            </div>
+                                        </div>
+                                        <div id='component4'>
+                                            <div class="side right">
+                                                <div>15</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <div>PS | Controls</div>
+                                    </div>
+                                    <div id='component5-parent'>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div id='component5-css' class="bar-5"></div>
+                                            </div>
+                                        </div>
+                                        <div id='component5'>
+                                            <div class="side right">
+                                                <div>15</div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </body>
 
                         </div>
